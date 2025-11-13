@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- enlace a los íconos de Font Awesom -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/c
+ss/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <p class="header__logo">
+        <a href="../index.html">Biblioteca Mía</a>
+      </p>
+      <nav class="header__nav">
+        <!--Barra de Navegación-->
+        <ul>
+          <li>
+            <a href="../index.html">HOME</a>
+          </li>
+          <li>
+            <a href="./contacto.html">CONTACTO</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="seccion-contacto">
+        <h1 class="titulo-contacto">Contacto</h1>
+        <form
+          class="form"
+          action="https://formspree.io/f/movkarwn"
+          method="POST"
+        >
+          <!-- Creo un contenedor tipo div para cada campo -->
+          <div class="campo-form">
+            <label for="email"> Correo:</label>
+            <input id="email" type="email" name="email" required />
+          </div>
+
+          <div class="campo-form">
+            <label for="mensaje"> Mensaje:</label>
+            <textarea id="mensaje" name="message" required></textarea>
+          </div>
+
+          <!-- Asunto del mail que te llega -->
+          <input type="hidden" name="subject" value="Contacto desde el sitio" />
+          <!-- your other form fields go here -->
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Página diseñada por DK diseños
+        <i class="fa-regular fa-copyright"></i> 2025
+      </p>
+
+      <nav>
+        <ul>
+          <li><i class="fa-brands fa-instagram"></i></li>
+          <li><i class="fa-brands fa-tiktok"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>

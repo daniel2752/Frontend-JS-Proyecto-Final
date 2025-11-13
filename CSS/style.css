@@ -1,0 +1,302 @@
+/* Reseteamos el CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Para que un rem sea = a 10px */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Roboto";
+  font-size: 1.6rem; /* Se asigna aquí un font size para que si a alguna parte del texto no le asigne ningún valor, que tome este por defecto*/
+  line-height: 1.5; /* interlineado */
+  /* background y font sacado de la página de google */
+  background: #2a7b9b;
+  background: linear-gradient(
+    90deg,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
+
+  display: flex; /* al ponerlo en el body, hago flexible a los hijos: header, main y footer*/
+  flex-direction: column;
+  min-height: 100vh; /* le estoy diciendo que ocupe toda la pantalla*/
+}
+
+.header {
+  background-color: beige;
+  display: flex; /* tiene 2 hijos, logo y nav */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem;
+  margin-left: 2rem;
+}
+
+.header__logo a {
+  color: black;
+  text-decoration: none; /* le saco el subrayado que viene por defecto */
+}
+
+.header nav {
+  padding: 1rem;
+  margin-right: 2rem;
+}
+
+.header nav ul {
+  list-style: none; /* le saco los puntitos a la lista */
+  display: flex; /* se van a poner en fila, en lugar de aparecer uno abajo de otro */
+  justify-content: center;
+  gap: 2rem; /* espacio entre los elementos*/
+}
+
+.header__nav li {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header__nav a {
+  color: black;
+  text-decoration: none;
+  display: inline-block; /* se pone para que los enlaces puedan crecer y darle un padding */
+  padding: 1rem;
+}
+
+.footer {
+  background-color: beige;
+  padding: 2rem;
+  color: black;
+  display: inline-flex;
+  /* hago flexibles al p y a la nav */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer nav ul {
+  list-style: none; /* le saco los puntitos a la lista */
+  display: flex; /* se van a poner en fila, en lugar de aparecer uno abajo de otro */
+  justify-content: center;
+  gap: 2rem; /* espacio entre los elementos*/
+  cursor: pointer;
+}
+
+/* ------------------------------------------------------------------*/
+/*                              BOTONES                              */
+/* ------------------------------------------------------------------*/
+.btn {
+  background-color: #b01f17;
+  color: #e5e6e8;
+  border-radius: 100px;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  height: 45px;
+  border: 2px solid #1d1a20;
+}
+
+.btn:hover {
+  background-color: #b71c34;
+}
+
+.btn-eliminar-carrito {
+  background-color: #1d1a20;
+  border: 2px solid #d21f3c;
+}
+.btn-vaciar-carrito {
+  background-color: #f7bb2b;
+  color: #1d1a20;
+}
+.btn-vaciar-carrito:hover {
+  background-color: #e0aa24;
+}
+
+/* ------------------------------------------------------------------------- */
+/*                                CARRITO                                    */
+/* ------------------------------------------------------------------------- */
+#contenedor-carrito {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+#total-carrito {
+  position: absolute;
+  top: 13rem;
+  right: 4rem;
+  font-weight: bold;
+  font-size: 1.8rem;
+  background-color: beige;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    HOME                                    */
+/* -------------------------------------------------------------------------- */
+
+main {
+  width: 90%; /* le estoy dando un aire a los costados */
+  flex: 1; /* hago que crezca todo lo que pueda */
+  margin: 2rem auto; /* el auto hace que los margenes a los costados se adapten. Arriba y abajo quedan 2rem */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  font-size: 4rem;
+  margin: 2rem 0; /* 0n an los laterales 2 arriba y abajo */
+}
+
+.parrafo-home {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 80%;
+}
+
+.productos-home {
+  width: 100%;
+}
+
+.productos-home h2 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 1rem;
+  margin: 3rem;
+}
+
+.contenedor-tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.tarjeta-producto {
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 30rem;
+  /* hacemos flexibles a los elementos del article */
+  /* los colocamos en columna y centrados */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.tarjeta-producto h3 {
+  font-size: 2.5rem;
+}
+
+.tarjeta-producto p {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Contacto                                  */
+/* -------------------------------------------------------------------------- */
+
+.seccion-contacto {
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.titulo-contacto {
+  font-size: 4rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.form {
+  color: aliceblue;
+  background-color: #1d1a20;
+  padding: 5rem;
+  border-radius: 1rem;
+
+  width: 60rem; /* ancho relativo */
+
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.campo-form label {
+  font-size: 2rem;
+}
+.campo-form input,
+.campo-form textarea {
+  font-family: Arial;
+  padding: 1rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.form button {
+  background-color: #d21f3c;
+  color: #e5e6e8;
+  border: none;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                media queries                               */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__logo,
+  .header__nav {
+    margin: 0;
+  }
+
+  .contenedor-tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-producto {
+    width: 80%;
+  }
+  .form {
+    width: 80%;
+    min-width: 400px;
+  }
+}

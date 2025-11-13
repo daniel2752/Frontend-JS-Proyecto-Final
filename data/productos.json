@@ -1,0 +1,6 @@
+[
+  { "nombre": "Libro 1", "precio": 1000, "img": "img/Libro 1.jpg" },
+  { "nombre": "Libro 2", "precio": 2000, "img": "img/Libro 2.jpg" },
+  { "nombre": "Libro 3", "precio": 3000, "img": "img/Libro 3.jpg" },
+  { "nombre": "Libro 4", "precio": 4000, "img": "img/Libro 4.jpg" }
+]
